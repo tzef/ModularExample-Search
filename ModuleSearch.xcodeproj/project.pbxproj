@@ -18,6 +18,7 @@
 		C9A78833285F182100D9177B /* RecentSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A78832285F182100D9177B /* RecentSearchService.swift */; };
 		C9A78835285F185C00D9177B /* RecentSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A78834285F185C00D9177B /* RecentSearchRepository.swift */; };
 		C9A78838285F220E00D9177B /* UITableViewCell+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A78837285F220E00D9177B /* UITableViewCell+ReuseIdentifier.swift */; };
+		C9A7883B285F235C00D9177B /* PropertyWrapper+UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A7883A285F235C00D9177B /* PropertyWrapper+UserDefault.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		C9A78832285F182100D9177B /* RecentSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchService.swift; sourceTree = "<group>"; };
 		C9A78834285F185C00D9177B /* RecentSearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchRepository.swift; sourceTree = "<group>"; };
 		C9A78837285F220E00D9177B /* UITableViewCell+ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+ReuseIdentifier.swift"; sourceTree = "<group>"; };
+		C9A7883A285F235C00D9177B /* PropertyWrapper+UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PropertyWrapper+UserDefault.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				C9A78837285F220E00D9177B /* UITableViewCell+ReuseIdentifier.swift */,
+				C9A7883A285F235C00D9177B /* PropertyWrapper+UserDefault.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9A784FD2839AC2200D9177B /* GithubSearchController.swift in Sources */,
+				C9A7883B285F235C00D9177B /* PropertyWrapper+UserDefault.swift in Sources */,
 				C9A787C5285527B000D9177B /* SearchControllerService.swift in Sources */,
 				C9A787872854E05100D9177B /* UIFactory.swift in Sources */,
 				C9A78833285F182100D9177B /* RecentSearchService.swift in Sources */,

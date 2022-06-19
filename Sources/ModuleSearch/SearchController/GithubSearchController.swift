@@ -13,6 +13,7 @@ final class GithubSearchController: SearchController, SearchControllerService {
     private(set) var keyword: String = "" {
         didSet {
             onKeywordSearched?(keyword)
+            recentSearch.saveRecentSearchKeyword(keyword)
         }
     }
 
