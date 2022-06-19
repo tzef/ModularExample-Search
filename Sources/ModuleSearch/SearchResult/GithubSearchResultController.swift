@@ -6,6 +6,10 @@
 import UIKit
 import ModuleDesignSystem
 
+protocol GithubSearchResultControllerDelegate: AnyObject {
+    func selectedRecentSearch(keyword: String)
+}
+
 final class GithubSearchResultController: UIViewController {
     var statusTitle: String? {
         didSet {
@@ -18,6 +22,8 @@ final class GithubSearchResultController: UIViewController {
             tableView.reloadData()
         }
     }
+
+    weak var delegate: GithubSearchResultControllerDelegate?
 
     private lazy var titleLabel = DesignSystem.TitleLabel()
     private lazy var tableView: UITableView = {
@@ -53,7 +59,10 @@ final class GithubSearchResultController: UIViewController {
 }
 
 extension GithubSearchResultController: UITableViewDelegate {
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.selectedRecentSearch(keyword: recentSearches[indexPath.row])
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 
 extension GithubSearchResultController: UITableViewDataSource {

@@ -30,6 +30,7 @@ final class GithubSearchController: SearchController, SearchControllerService {
 
     private lazy var githubSearchResultController: GithubSearchResultController = {
         let viewController = GithubSearchResultController()
+        viewController.delegate = self
         return viewController
     }()
 
@@ -91,6 +92,12 @@ extension GithubSearchController: UISearchBarDelegate {
             )
             return
         }
+        self.keyword = keyword
+    }
+}
+
+extension GithubSearchController: GithubSearchResultControllerDelegate {
+    func selectedRecentSearch(keyword: String) {
         self.keyword = keyword
     }
 }
