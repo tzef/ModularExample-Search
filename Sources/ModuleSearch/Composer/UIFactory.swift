@@ -12,6 +12,7 @@ public final class UIFactory {
         designSystemFactory: DesignSystemFactory
     ) -> SearchController & SearchControllerService {
         DesignSystem.setup(factory: designSystemFactory)
-        return GithubSearchController()
+        let recentSearch = RecentSearchRepository()
+        return GithubSearchController(recentSearch: recentSearch)
     }
 }

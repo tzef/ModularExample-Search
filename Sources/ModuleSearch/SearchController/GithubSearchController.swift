@@ -32,6 +32,12 @@ final class GithubSearchController: SearchController, SearchControllerService {
         return viewController
     }()
 
+    private let recentSearch: RecentSearchService
+    
+    init(recentSearch: RecentSearchService) {
+        self.recentSearch = recentSearch
+    }
+
     func setup(navigationItem: UINavigationItem) {
         // for fixing the bug related to UIRefreshControl and UISearchController
         // ref: https://developer.apple.com/forums/thread/118457
@@ -66,6 +72,7 @@ extension GithubSearchController: UISearchResultsUpdating {
 extension GithubSearchController: UISearchControllerDelegate {
     func willPresentSearchController(_ searchController: UISearchController) {
         searchController.searchBar.text = searchController.searchBar.placeholder
+        githubSearchResultController.recentSearches = recentSearch.getRecentSearchKeywords()
     }
 
     func didPresentSearchController(_ searchController: UISearchController) {}

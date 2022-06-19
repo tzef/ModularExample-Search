@@ -15,6 +15,9 @@
 		C9A787872854E05100D9177B /* UIFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A787862854E05100D9177B /* UIFactory.swift */; };
 		C9A787C5285527B000D9177B /* SearchControllerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A787C4285527B000D9177B /* SearchControllerService.swift */; };
 		C9A787DB285EDA2400D9177B /* ModuleDesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = C9A787DA285EDA2400D9177B /* ModuleDesignSystem */; };
+		C9A78833285F182100D9177B /* RecentSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A78832285F182100D9177B /* RecentSearchService.swift */; };
+		C9A78835285F185C00D9177B /* RecentSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A78834285F185C00D9177B /* RecentSearchRepository.swift */; };
+		C9A78838285F220E00D9177B /* UITableViewCell+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A78837285F220E00D9177B /* UITableViewCell+ReuseIdentifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		C9A787812854DCFB00D9177B /* ModuleDesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ModuleDesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9A787862854E05100D9177B /* UIFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFactory.swift; sourceTree = "<group>"; };
 		C9A787C4285527B000D9177B /* SearchControllerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchControllerService.swift; sourceTree = "<group>"; };
+		C9A78832285F182100D9177B /* RecentSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchService.swift; sourceTree = "<group>"; };
+		C9A78834285F185C00D9177B /* RecentSearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchRepository.swift; sourceTree = "<group>"; };
+		C9A78837285F220E00D9177B /* UITableViewCell+ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+ReuseIdentifier.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +69,9 @@
 		C9A784F02839AB8300D9177B /* ModuleSearch */ = {
 			isa = PBXGroup;
 			children = (
+				C9A78836285F1A7500D9177B /* Helper */,
 				C9A787852854E04500D9177B /* Composer */,
+				C9A78831285F180500D9177B /* RecentSearch */,
 				C9A7865F283D124400D9177B /* Status */,
 				C9A784FB2839AC0800D9177B /* SearchResult */,
 				C9A784FA2839AC0100D9177B /* SearchController */,
@@ -115,6 +123,23 @@
 				C9A787862854E05100D9177B /* UIFactory.swift */,
 			);
 			path = Composer;
+			sourceTree = "<group>";
+		};
+		C9A78831285F180500D9177B /* RecentSearch */ = {
+			isa = PBXGroup;
+			children = (
+				C9A78832285F182100D9177B /* RecentSearchService.swift */,
+				C9A78834285F185C00D9177B /* RecentSearchRepository.swift */,
+			);
+			path = RecentSearch;
+			sourceTree = "<group>";
+		};
+		C9A78836285F1A7500D9177B /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C9A78837285F220E00D9177B /* UITableViewCell+ReuseIdentifier.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,8 +230,11 @@
 				C9A784FD2839AC2200D9177B /* GithubSearchController.swift in Sources */,
 				C9A787C5285527B000D9177B /* SearchControllerService.swift in Sources */,
 				C9A787872854E05100D9177B /* UIFactory.swift in Sources */,
+				C9A78833285F182100D9177B /* RecentSearchService.swift in Sources */,
 				C9A784F32839AB8300D9177B /* ModuleSearch.docc in Sources */,
+				C9A78838285F220E00D9177B /* UITableViewCell+ReuseIdentifier.swift in Sources */,
 				C9A784FF2839AC2700D9177B /* GithubSearchResultController.swift in Sources */,
+				C9A78835285F185C00D9177B /* RecentSearchRepository.swift in Sources */,
 				C9A78661283D125300D9177B /* SearchControllerStatus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
