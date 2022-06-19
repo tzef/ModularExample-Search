@@ -13,6 +13,8 @@
 		C9A7881C285F0BDF00D9177B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A7881A285F0BDF00D9177B /* Main.storyboard */; };
 		C9A7881E285F0BE100D9177B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9A7881D285F0BE100D9177B /* Assets.xcassets */; };
 		C9A78821285F0BE100D9177B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A7881F285F0BE100D9177B /* LaunchScreen.storyboard */; };
+		C9A7882D285F116E00D9177B /* ModuleUI in Frameworks */ = {isa = PBXBuildFile; productRef = C9A7882C285F116E00D9177B /* ModuleUI */; };
+		C9A78830285F11CF00D9177B /* ModuleSearch in Frameworks */ = {isa = PBXBuildFile; productRef = C9A7882F285F11CF00D9177B /* ModuleSearch */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,7 @@
 		C9A78820285F0BE100D9177B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9A78822285F0BE100D9177B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9A78828285F0CC400D9177B /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SampleCode.xcconfig; sourceTree = "<group>"; };
+		C9A7882A285F101100D9177B /* ModularExample-Search */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "ModularExample-Search"; path = ..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9A78830285F11CF00D9177B /* ModuleSearch in Frameworks */,
+				C9A7882D285F116E00D9177B /* ModuleUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +46,10 @@
 		C9A78808285F0BDF00D9177B = {
 			isa = PBXGroup;
 			children = (
+				C9A78829285F101100D9177B /* Packages */,
 				C9A78813285F0BDF00D9177B /* Demo */,
 				C9A78812285F0BDF00D9177B /* Products */,
+				C9A7882E285F11CF00D9177B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +76,21 @@
 			path = Demo;
 			sourceTree = "<group>";
 		};
+		C9A78829285F101100D9177B /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				C9A7882A285F101100D9177B /* ModularExample-Search */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		C9A7882E285F11CF00D9177B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,6 +107,10 @@
 			dependencies = (
 			);
 			name = Demo;
+			packageProductDependencies = (
+				C9A7882C285F116E00D9177B /* ModuleUI */,
+				C9A7882F285F11CF00D9177B /* ModuleSearch */,
+			);
 			productName = Demo;
 			productReference = C9A78811285F0BDF00D9177B /* Demo.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +139,9 @@
 				Base,
 			);
 			mainGroup = C9A78808285F0BDF00D9177B;
+			packageReferences = (
+				C9A7882B285F116E00D9177B /* XCRemoteSwiftPackageReference "ModularExample-UI" */,
+			);
 			productRefGroup = C9A78812285F0BDF00D9177B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -361,6 +390,29 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C9A7882B285F116E00D9177B /* XCRemoteSwiftPackageReference "ModularExample-UI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tzef/ModularExample-UI.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C9A7882C285F116E00D9177B /* ModuleUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C9A7882B285F116E00D9177B /* XCRemoteSwiftPackageReference "ModularExample-UI" */;
+			productName = ModuleUI;
+		};
+		C9A7882F285F11CF00D9177B /* ModuleSearch */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ModuleSearch;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C9A78809285F0BDF00D9177B /* Project object */;
 }

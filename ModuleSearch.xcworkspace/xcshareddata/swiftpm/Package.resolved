@@ -8,6 +8,15 @@
         "revision" : "a1a774d9f72f81ac56b3f10d75f0d643974d76f8",
         "version" : "1.0.0"
       }
+    },
+    {
+      "identity" : "modularexample-ui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tzef/ModularExample-UI.git",
+      "state" : {
+        "revision" : "e9f0105336849cb77f4f20255e528d6531306aef",
+        "version" : "1.0.0"
+      }
     }
   ],
   "version" : 2
